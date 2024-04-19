@@ -21,11 +21,11 @@ h1, h2, h4 {
     padding: .5em 1.5em;
 }
 
-.sepetator {
+.separator {
     border: none;
     border-top: 1px solid $accent-clr-bright;
-    margin: 5em auto 2.5em auto;
     width: 120px;
+    margin: 4em auto 2em auto;
 }
 
 
@@ -57,6 +57,9 @@ h1, h2, h4 {
     }
 }
 
+.main.separator {
+    margin: 5em auto 2.5em auto;
+}
 
 
 /* Hero */
@@ -66,7 +69,6 @@ h1, h2, h4 {
     color: $text-clr-light;
     overflow: hidden;
 
-
     .blob {
         position: absolute;
         top: 30%;
@@ -74,10 +76,19 @@ h1, h2, h4 {
         height: 70%;
         z-index: 1;
     }
-    &_img{
-        position: relative;
+   &_img-container{
         width: 100%;
+        max-height: 500px;
+        height: 40vh;
+        background: url("https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        position: relative;
+        max-height: 500px;
         z-index: 2;
+        box-shadow: inset 0 0 0 50vw rgba(21, 20, 21, 0.5);
+
     }
 
     &_text-content {
@@ -184,5 +195,64 @@ h1, h2, h4 {
             color: $accent-clr;
         }
     }
+}
+
+.footer {
+    background-color: #e7e7e7;
+    padding: 2.5em 2em;
+    text-transform: uppercase;
+
+   .top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .5em;
+    padding: 1em 0;
+    border-bottom: 1px solid $text-clr-medium;
+    
+    &_logo, &_social-icons {
+        font-size: 1.5rem;
+    }
+
+    &_logo {
+        font-weight: 600;
+    }
+
+    &_social-icons {
+        color: $text-clr-medium;
+
+        i {
+            margin-right: .5em;
+        }
+    }
+   } 
+
+   .bottom {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    text-align: center;
+    line-height: 1.7;
+
+    &_columns {
+        display: flex;
+        flex-direction: column;
+
+        h6 {
+            font-size: .9rem;
+            font-weight: 400;
+            color: $shadow-clr;
+            margin-bottom: .5em;
+        }
+
+        a {
+            font-size: .7rem;
+            font-weight: 500;
+        }
+    }
+   }
 
 }
