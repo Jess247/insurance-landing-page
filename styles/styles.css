@@ -49,9 +49,11 @@ h1, h2, h4 {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
 }
 .header_logo {
+  flex-basis: 80%;
   font-size: 1.7rem;
   font-family: "Space Grotesk";
   font-weight: bold;
@@ -63,6 +65,30 @@ h1, h2, h4 {
   border-radius: 2px;
   font-size: 1.2rem;
   box-shadow: 1px 1px 5px #868686;
+}
+.header_nav {
+  text-align: center;
+  margin: 1em auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.header_nav .nav_link {
+  padding: 0.5em;
+  border-bottom: 1px solid #646464;
+  color: #646464;
+  transition: transform ease-in-out 0.3s;
+}
+.header_nav .nav_link:hover {
+  color: #010101;
+  transform: scale(1.05);
+}
+.header_nav .nav_btn {
+  margin-top: 1em;
+}
+.header_nav .nav_btn:hover {
+  background: #010101;
+  color: #fefefe;
 }
 
 .main.separator {

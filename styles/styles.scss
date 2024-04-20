@@ -39,9 +39,11 @@ h1, h2, h4 {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
 
     &_logo{
+        flex-basis: 80%;
         font-size: 1.7rem;
         font-family: "Space Grotesk";
         font-weight: bold;
@@ -54,6 +56,35 @@ h1, h2, h4 {
         border-radius: 2px;
         font-size: 1.2rem;
         box-shadow: 1px 1px 5px  $shadow-clr;
+    }
+
+    &_nav {
+        text-align: center;
+        margin: 1em auto;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .nav_link {
+            padding: .5em;
+            border-bottom: 1px solid $text-clr-medium;
+            color: $text-clr-medium;
+            transition: transform ease-in-out .3s;
+        }
+
+        .nav_link:hover {
+            color: $text-clr-dark;
+            transform: scale(1.05);
+        }
+
+        .nav_btn {
+            margin-top: 1em;
+        }
+
+        .nav_btn:hover {
+            background: $text-clr-dark;
+            color: $text-clr-light;
+        }
     }
 }
 
