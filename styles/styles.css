@@ -11,6 +11,58 @@ a {
   cursor: pointer;
 }
 
+@media (min-width: 550px) {
+  .header {
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+  .header .header_logo {
+    flex-basis: 0;
+  }
+  .header .header_nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+  }
+  .header .header_nav .nav_link {
+    border: none;
+  }
+  .header .header_nav .nav_btn {
+    margin: 0 0 0 1em;
+  }
+  .values_cards-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .values_cards-container .values_text {
+    width: 200px;
+  }
+  .footer .bottom {
+    justify-content: center;
+  }
+  .footer .bottom .bottom_columns {
+    flex-basis: 20%;
+  }
+}
+@media (min-width: 750px) {
+  .hero {
+    height: 30vh;
+    min-height: 350px;
+  }
+  .hero_content {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+  }
+  .hero_content .hero_img-container {
+    margin: 3em 2em 0 0;
+  }
+  .hero_content .hero_text-content {
+    margin: 2em;
+    justify-content: flex-start;
+  }
+}
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -22,6 +74,7 @@ h1, h2, h4 {
 
 .container {
   padding: 1.5em;
+  max-width: 1000px;
 }
 
 .btn {
@@ -39,13 +92,10 @@ h1, h2, h4 {
   margin: 4em auto 2em auto;
 }
 
-.hidden {
-  display: none;
-}
-
 /* Header */
 .header {
   padding: 1.5em 2.5em;
+  min-width: 300px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -71,7 +121,6 @@ h1, h2, h4 {
   margin: 1em auto;
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 .header_nav .nav_link {
   padding: 0.5em;
@@ -89,6 +138,9 @@ h1, h2, h4 {
 .header_nav .nav_btn:hover {
   background: #010101;
   color: #fefefe;
+}
+.header .hidden {
+  display: none;
 }
 
 .main.separator {
@@ -158,9 +210,14 @@ h1, h2, h4 {
 /* Values */
 .values {
   text-align: center;
+  margin: 0 auto;
 }
 .values_heading {
   font-size: 2.5em;
+}
+.values_cards-container {
+  display: flex;
+  justify-content: center;
 }
 .values_card {
   padding: 1.5em;
@@ -188,6 +245,8 @@ h1, h2, h4 {
   font-size: 0.9rem;
   line-height: 1.3em;
   margin-top: -0.5em;
+  min-width: 250px;
+  max-width: 400px;
 }
 
 .about {
@@ -244,12 +303,14 @@ h1, h2, h4 {
 .footer .bottom {
   padding: 1em;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 1.2em;
   text-align: center;
   line-height: 1.7;
 }
 .footer .bottom_columns {
+  flex-basis: 100%;
   display: flex;
   flex-direction: column;
 }

@@ -1,4 +1,4 @@
-@import "resets", "variables";
+@import "resets", "variables", "media-queries";
 
 body {
     font-family: "Poppins", sans-serif;
@@ -11,6 +11,7 @@ h1, h2, h4 {
 
 .container {
     padding: 1.5em;
+    max-width: 1000px;
 }
 
 .btn {
@@ -29,13 +30,12 @@ h1, h2, h4 {
 }
 
 
-.hidden {
-    display: none;
-}
+
 
 /* Header */
 .header {
     padding: 1.5em 2.5em;
+    min-width: 300px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -63,7 +63,6 @@ h1, h2, h4 {
         margin: 1em auto;
         display: flex;
         flex-direction: column;
-        position: relative;
 
         .nav_link {
             padding: .5em;
@@ -85,6 +84,9 @@ h1, h2, h4 {
             background: $text-clr-dark;
             color: $text-clr-light;
         }
+    }
+    .hidden {
+        display: none;
     }
 }
 
@@ -160,13 +162,18 @@ h1, h2, h4 {
     }
 }
 
-/* Values */
+/* Values */ 
 
 .values {
     text-align: center;
+    margin: 0 auto;
 
     &_heading {
         font-size: 2.5em;
+    }
+    &_cards-container {
+        display: flex;
+        justify-content: center;
     }
 
     &_card {
@@ -197,6 +204,8 @@ h1, h2, h4 {
             font-size: .9rem;
             line-height: 1.3em;
             margin-top: -.5em;
+            min-width: 250px;
+            max-width: 400px;
         }
     }
 }
@@ -263,12 +272,14 @@ h1, h2, h4 {
    .bottom {
     padding: 1em;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 1.2em;
     text-align: center;
     line-height: 1.7;
 
     &_columns {
+        flex-basis: 100%;
         display: flex;
         flex-direction: column;
 
