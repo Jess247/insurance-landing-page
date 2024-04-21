@@ -162,6 +162,7 @@ h1, h2, h4 {
     &_cards-container {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     &_card {
@@ -170,6 +171,7 @@ h1, h2, h4 {
         flex-direction: column;
         align-items: center;
         gap: 1.5em;
+        max-width: 300px;
 
         .icon {
             background: $icon-bg-clr;
@@ -314,14 +316,7 @@ h1, h2, h4 {
         }
     }
 
-    .values_cards-container {
-        display: flex;
-        flex-wrap: wrap;
-        
-        .values_text {
-            width: 200px;
-        }
-    }
+
 
     .footer {
         .bottom {
