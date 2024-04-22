@@ -97,9 +97,10 @@ h1, h2, h4 {
 
 /* Hero */
 .hero {
+    position: relative;
     background: $accent-clr;
     color: $text-clr-light;
-    overflow: hidden;
+
 
    &_img-container{
         width: 100%;
@@ -342,7 +343,8 @@ h1, h2, h4 {
 
         .hero_img-container {
             margin: 3em 2em 0 0;
-
+            min-width: 300px;
+            max-width: 370px;
         }
 
         .hero_text-content {
@@ -354,7 +356,9 @@ h1, h2, h4 {
 }
 
 @media(min-width: 1200px) {
-
+    .hero {
+        padding: 0 10%;
+    }
     .about {
         flex-direction: row;
     }
